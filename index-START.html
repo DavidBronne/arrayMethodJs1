@@ -110,6 +110,18 @@
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
 
+    const sumUp = data.reduce( (transportsObj , el) => {
+      if (!transportsObj[el]) {
+        transportsObj[el]=0
+      }
+      transportsObj[el]++
+      return transportsObj
+    } , {})
+
+    console.log(`sumUp`, sumUp)
+
+ 
+
   </script>
 </body>
 </html>
